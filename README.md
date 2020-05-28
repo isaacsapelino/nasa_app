@@ -14,7 +14,7 @@ I have made a simple script to start the web app.
 Make sure that you are in your Python Virtual Environment.
 
 Now type, `./start_app.ps1` and wait for your web app to initialize.
-You will be have a minimized PowerShell prompt that you can use to retrieve information and stop the web app.
+You will have a minimized PowerShell prompt that you can use to retrieve information and stop the web app.
 
 ## Finish
 To stop, go to the powershell prompts and press `Ctrl + C` to each of them.
