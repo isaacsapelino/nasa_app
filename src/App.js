@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import {useFetch} from './components/useFetch';
+
+
+
 
 function App() {
+  const myStyle = {
+    width: 500
+  };
+  const photoData = useFetch('https://api.nasa.gov/planetary/apod?api_key=dWpXGqrEgV0MaxhYaRfl4wIQIAKYyfHt8dubgNdL');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">      
+      <img src={photoData.url} style={myStyle} />
+      <h5>Owner: </h5><p>{photoData.copyright}</p>
+      <br />
+      <h5>Date: </h5><p>{photoData.date}</p>
+    <h5>Explanation: </h5><p>{photoData.explanation}</p>
     </div>
   );
 }
