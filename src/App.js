@@ -3,6 +3,9 @@ import './App.css';
 import {useFetch} from './components/useFetch';
 
 function App() {
+
+  const keyApi = 'o41IGNPWQIaHJCbTiiw3tYizNso7OhHI4F8eblwC'; // Input your API Key here.
+
   const myStyle = {
     width: 500
   };
@@ -16,7 +19,7 @@ function App() {
     });
   });
 
-  const photoData = useFetch('https://api.nasa.gov/planetary/apod?api_key=dWpXGqrEgV0MaxhYaRfl4wIQIAKYyfHt8dubgNdL');
+  const photoData = useFetch(`https://api.nasa.gov/planetary/apod?api_key=${keyApi}`);
   return (
     <div className="App">
       <br />
