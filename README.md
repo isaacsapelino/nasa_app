@@ -12,7 +12,7 @@ I have made a simple script to start the web app.
 
 #### Note
 Make sure that you are in your Python Virtual Environment.
-
+Do `npm install` inside the project directory.
 Now type, `./start_app.ps1` and wait for your web app to initialize.
 You will have a minimized PowerShell prompt that you can use to retrieve information and stop the web app.
 
